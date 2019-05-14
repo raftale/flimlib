@@ -17,7 +17,6 @@ matrix:
         - export JAVA_HOME=${JAVA_HOME:-/c/jdk}
         - export PATH=${JAVA_HOME}/bin:${PATH}
         - .travis/install-maven.sh
-        - bash ".travis/build.sh"
 
 # https://docs.travis-ci.com/user/installing-dependencies/
 addons:
