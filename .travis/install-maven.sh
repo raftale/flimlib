@@ -9,7 +9,7 @@ set -e
 # todo: add method for checking if latest or automatically grabbing latest
 mvn_version=${mvn_version:-3.5.2}
 url="http://www.mirrorservice.org/sites/ftp.apache.org/maven/maven-3/${mvn_version}/binaries/apache-maven-${mvn_version}-bin.tar.gz"
-install_dir="/c/Program Files/maven"
+install_dir="/c/maven"
 
 if [ -d ${install_dir} ]; then
     mv ${install_dir} ${install_dir}.$(date +"%Y%m%d")
