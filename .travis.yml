@@ -7,6 +7,11 @@ matrix:
       # https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies/49748494#49748494
       osx_image: xcode9.3
     - os: windows
+      language: shell
+      install:
+        - choco install jdk8
+        - export PATH=$PATH:"/c/Program Files/Java/jdk1.8.0_191/bin"
+        - java -version
 
 # https://docs.travis-ci.com/user/installing-dependencies/
 addons:
