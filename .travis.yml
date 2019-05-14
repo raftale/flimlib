@@ -8,10 +8,11 @@ matrix:
       osx_image: xcode9.3
     - os: windows
       language: shell
+      # https://travis-ci.community/t/jdk-not-installed-or-not-on-path/930/2
       install:
-        - choco install jdk8
-        - export PATH=$PATH:"/c/Program Files/Java/jdk1.8.0_191/bin"
-        - java -version
+        - export JAVA_HOME=${JAVA_HOME:-/c/jdk}
+        - export PATH=${JAVA_HOME}/bin:${PATH}
+        - choco install jdk8 -params 'installdir=c:\\jdk' -y
 
 # https://docs.travis-ci.com/user/installing-dependencies/
 addons:
