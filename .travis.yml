@@ -15,7 +15,8 @@ matrix:
       # https://travis-ci.community/t/jdk-not-installed-or-not-on-path/930/2
       install:
         - export JAVA_HOME=${JAVA_HOME:-/c/jdk}
-        - export PATH=${JAVA_HOME}/bin:${PATH}
+        - export MAVEN_HOME=${JAVA_HOME:-/c/maven}
+        - export PATH=${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${PATH}
         - .travis/install-maven.sh
 
 # https://docs.travis-ci.com/user/installing-dependencies/
