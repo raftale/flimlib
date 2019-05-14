@@ -1,5 +1,7 @@
 #!/bin/bash
 
+choco install jdk8 -params 'installdir=c:\\jdk' -y
+
 curl -fsLO https://raw.githubusercontent.com/scijava/scijava-scripts/master/travis-build.sh
 sh travis-build.sh $encrypted_58cee4862e74_key $encrypted_58cee4862e74_iv
 
