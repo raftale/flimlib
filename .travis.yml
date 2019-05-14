@@ -6,6 +6,7 @@ matrix:
     - os: osx
       # https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies/49748494#49748494
       osx_image: xcode9.3
+    - os: windows
 
 # https://docs.travis-ci.com/user/installing-dependencies/
 addons:
