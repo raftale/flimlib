@@ -21,6 +21,7 @@ branches:
   only:
   - master
   - "/.*-[0-9]+\\..*/"
+  - dev
 install:
   - pip install --user cram
 script: ".travis/build.sh"
