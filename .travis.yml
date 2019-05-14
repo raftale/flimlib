@@ -7,13 +7,14 @@ matrix:
       # https://stackoverflow.com/questions/49748063/pip-install-fails-for-every-package-could-not-find-a-version-that-satisfies/49748494#49748494
       osx_image: xcode9.3
     - os: windows
-      language: sh
+      language: bash
       before_install:
         - choco install -y jdk8
       # https://travis-ci.community/t/jdk-not-installed-or-not-on-path/930/2
       install:
         - export JAVA_HOME=${JAVA_HOME:-/c/jdk}
         - export PATH=${JAVA_HOME}/bin:${PATH}
+        - choco install maven
         - choco
         - choco install -y jdk8
         - bash ".travis/build.sh"
